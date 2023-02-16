@@ -1,0 +1,28 @@
+/*The following program printArray() is to print the array using a function, it is used to teach how to get array input to a function
+Here the n value is important because it is used to tell the function the length of the function
+x-------------p[0]==*(p+0)--------------------x*/
+
+
+
+
+#include <stdio.h>
+void printArray(int *p,int n)
+{
+    int i=0;
+    while(i<n)
+    {
+        printf("%d ",*p);
+        i++;
+        p++;
+    }
+}
+
+int main()
+{
+    int arr[]={4,8,12,16,20};
+    int n=0;
+    n=sizeof(arr)/sizeof(arr[0]);
+    printArray(arr,n);
+
+    return 0;
+}
